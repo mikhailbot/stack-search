@@ -1,6 +1,7 @@
 <template>
   <div class="search-bar">
     <input type="text" v-model="search" />
+    <button v-on:click="searchStackOverflow">Search</button>
     <button v-on:click="clearSearchInput">Clear</button>
   </div>
 </template>
@@ -23,6 +24,9 @@ export default {
   methods: {
     clearSearchInput () {
       this.$store.dispatch('clearSearchInput')
+    },
+    searchStackOverflow () {
+      this.$store.dispatch('searchStackOverflow')
     }
   }
 }

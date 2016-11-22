@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 import * as actions from './actions'
 import * as getters from './getters'
 import search from './modules/search'
-// import products from './modules/products'
+import results from './modules/results'
 
 
 Vue.use(Vuex)
@@ -14,7 +14,8 @@ export default new Vuex.Store({
   actions,
   getters,
   modules: {
-    search
+    search,
+    results
   },
   strict: debug
 })
