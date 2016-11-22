@@ -1,0 +1,3 @@
+// Search module
+export const SEARCH_INPUT_UPDATE = 'SEARCH_INPUT_UPDATE'
+export const SEARCH_INPUT_CLEAR = 'SEARCH_INPUT_CLEAR'
