@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <search-bar></search-bar>
+    <results-list></results-list>
   </div>
 </template>
 
@@ -9,7 +10,8 @@ export default {
   name: 'app',
 
   components: {
-    searchBar: require('./components/SearchBar.vue')
+    searchBar: require('./components/SearchBar.vue'),
+    resultsList: require('./components/ResultsList.vue')
   },
   }
 </script>
