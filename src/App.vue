@@ -19,8 +19,8 @@ export default {
 <style>
 html, body {
   font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-  background: #140b47;
-  color: #e8f1b9;
+  background: #e8f1b9;
+  color: #140b47;
 }
 /* Color scheme http://jxnblk.com/hello-color/?c=140b47 */
 </style>

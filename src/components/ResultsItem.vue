@@ -57,7 +57,7 @@ export default {
   font-size: 0.8rem;
   color: #8d8e88;
   border-bottom: 1px #8d8e88 solid;
-  margin-bottom: 1rem;
+  margin-bottom: 0.25rem;
 }
 
 .item-status > span > i {
@@ -78,9 +78,9 @@ export default {
 
 .item-title > a {
   text-decoration: none;
-  color: #c9d0a8;
+  color: #140b47;
   font-weight: bold;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 .user {
@@ -88,7 +88,7 @@ export default {
   font-size: 0.8rem;
   display: flex;
   align-items: center;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
 }
 
 .user > i {

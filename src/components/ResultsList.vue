@@ -32,4 +32,8 @@ export default {
 </script>
 
 <style>
+.results-list {
+  width: 90%;
+  margin: auto;
+}
 </style>
