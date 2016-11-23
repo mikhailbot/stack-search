@@ -1,6 +1,6 @@
 <template>
   <div class="results-list">
-    <h1>Results</h1>
+    <button v-on:click="clearSearchInputAndResults" class="clear">Clear results</button>
 
     <div v-for="item in results.items">
       <results-item :item="item"></results-item>
@@ -21,7 +21,13 @@ export default {
 
   computed: mapState([
     'results'
-  ])
+  ]),
+
+  methods: {
+    clearSearchInputAndResults () {
+      this.$store.dispatch('clearSearchInputAndResults')
+    }
+  }
 }
 </script>
 

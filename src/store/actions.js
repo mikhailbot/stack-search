@@ -5,8 +5,9 @@ export const updateSearchInput = ({ commit }, payload) => {
   commit(types.SEARCH_INPUT_UPDATE, payload)
 }
 
-export const clearSearchInput = ({ commit }) => {
+export const clearSearchInputAndResults = ({ commit }) => {
   commit(types.SEARCH_INPUT_CLEAR)
+  commit(types.RESULTS_CLEAR)
 }
 
 export const searchStackOverflow = ({ commit, state }) => {

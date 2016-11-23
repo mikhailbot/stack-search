@@ -20,6 +20,12 @@ const mutations = {
   [types.RESULTS_FAILURE] (state, payload) {
     state.searching = false
     state.errors = payload.message
+  },
+
+  [types.RESULTS_CLEAR] (state) {
+    state.searching = false
+    state.errors = null
+    state.items = []
   }
 }
 
