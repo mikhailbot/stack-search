@@ -11,6 +11,8 @@ export const clearSearchInputAndResults = ({ commit }) => {
 }
 
 export const searchStackOverflow = ({ commit, state }) => {
+  commit(types.RESULTS_QUERY)
+  
   api.search(state.search)
     .then((response) => {
       commit(types.RESULTS_SUCCESS, response.data)

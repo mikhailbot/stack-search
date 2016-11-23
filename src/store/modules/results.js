@@ -9,6 +9,8 @@ const state = {
 const mutations = {
   [types.RESULTS_QUERY] (state) {
     state.searching = true
+    state.errors = null
+    state.items = []
   },
 
   [types.RESULTS_SUCCESS] (state, payload) {

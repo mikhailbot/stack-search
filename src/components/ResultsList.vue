@@ -1,9 +1,20 @@
 <template>
   <div class="results-list">
-    <button v-on:click="clearSearchInputAndResults" class="clear">Clear results</button>
+    <div v-if="this.results.searching" class="notice">
+      Searching...
+    </div>
 
-    <div v-for="item in results.items">
-      <results-item :item="item"></results-item>
+    <div v-if="this.results.items.length">
+      <div v-on:click="clearSearchInputAndResults" class="clear">Clear results</div>
+      <div v-for="item in results.items">
+        <results-item :item="item"></results-item>
+      </div>
+    </div>
+    <div v-else>
+      <div class="notice">
+        Simple Vue + Vuex application to search StackOverflow, created as an experiment to learn Vuex
+        <!-- Add empty results notice, however it also displays on first load -->
+      </div>
     </div>
 
   </div>
@@ -35,5 +46,16 @@ export default {
 .results-list {
   width: 90%;
   margin: auto;
+}
+
+.notice {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.3rem;
+}
+
+.clear {
+  text-align: center;
+  padding: 1rem;
 }
 </style>
