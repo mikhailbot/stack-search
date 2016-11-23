@@ -2,25 +2,29 @@
   <div class="results-item">
     <div class="item-head">
       <div class="item-date">
-        <i class="material-icons">date_range</i> <span>{{ createdDate }}</span>
-      </div>
-      <div class="item-title">
-        <a :href="this.item.link" v-html="this.item.title"></a>
+        Created <span>{{ createdDate }}</span>
       </div>
       <div class="item-status">
         <span class="answered" v-if="this.item.is_answered"><i class="material-icons">done</i></span>
         <span class="closed" v-if="this.item.closed_date"><i class="material-icons">block</i></span>
       </div>
     </div>
-    <div class="item-meta">
-      <div class="view count">
-        <i class="material-icons">visibility</i> <span>{{ this.item.view_count }}</span>
+    <div class="item-body">
+      <div class="content">
+        <div class="item-title">
+          <a :href="this.item.link" v-html="this.item.title"></a>
+        </div>
+        <div class="user">
+          <i class="material-icons">person</i> <span>{{ this.item.owner.display_name }}</span>
+        </div>
       </div>
-      <div class="answer count">
-        <i class="material-icons">question_answer</i> <span>{{ this.item.answer_count }}</span>
-      </div>
-      <div class="user">
-        <span>{{ this.item.owner.display_name }}</span> <i class="material-icons">person</i>
+      <div class="meta">
+        <div class="view count">
+          <span>{{ this.item.view_count }}</span> <i class="material-icons">visibility</i>
+        </div>
+        <div class="answer count">
+          <span>{{ this.item.answer_count }}</span> <i class="material-icons">question_answer</i>
+        </div>
       </div>
     </div>
   </div>
@@ -43,111 +47,66 @@ export default {
 
 <style>
 .results-item {
-  background: #fff;
-  border-radius: 5px;
-  display: inline-block;
-  max-height: 300px;
-  margin: 1rem;
-  position: relative;
-  width: 300px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin-bottom: 3rem;
 }
 
 .item-head {
-  margin: 1rem;
-}
-
-.item-date {
-  color: #aaaaaa;
-  margin-bottom: 0.5rem;
-  font-size: 0.8rem;
   display: flex;
-  align-content: center;
-}
-
-.item-date > i {
-  font-size: 1rem;
-}
-
-.item-date > span {
-  padding-left: 0.5rem;
-}
-
-.item-title {
-  margin: 1rem 0;
-  font-size: 1.1rem;
-}
-
-.item-title > a {
-  text-decoration: none;
-  color: #d35400;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #8d8e88;
+  border-bottom: 1px #8d8e88 solid;
+  margin-bottom: 1rem;
 }
 
 .item-status > span > i {
   font-size: 1rem;
 }
 
-.answered {
-  color: #ecf0f1;
-  position: absolute;
-  top: -0.5rem;
-  right: -0.5rem;
-  width: 30px;
-  height: 30px;
-  background: #27ae60;
-  border-radius: 15px;
+.item-body {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.closed {
-  color: #ecf0f1;
-  position: absolute;
-  top: -0.5rem;
-  right: -0.5rem;
-  width: 30px;
-  height: 30px;
-  background: #c0392b;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.content {
+  width: 70%;
 }
 
-.item-meta {
-  margin: 1rem;
-  color: #aaaaaa;
+.meta {
+  width: 30%;
+}
+
+.item-title > a {
+  text-decoration: none;
+  color: #c9d0a8;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.user {
+  color: #8d8e88;
   font-size: 0.8rem;
   display: flex;
   align-items: center;
+  padding-top: 1rem;
+}
+
+.user > i {
+  font-size: 1rem;
+  padding-right: 0.25rem;
 }
 
 .count {
   display: flex;
   align-items: center;
-  padding-right: 1rem;
+  justify-content: flex-end;
+  font-size: 0.8rem;
+  padding-top: 0.5rem;
+  color: #8d8e88;
 }
 
 .count > i {
   font-size: 1rem;
-}
-
-.count > span {
-  padding-left: 0.25rem;
-}
-
-.user {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-}
-
-.user > i {
-  font-size: 1rem;
-}
-
-.user > span {
-  padding-right: 0.25rem;
+  padding-left: 0.5rem;
 }
 </style>
