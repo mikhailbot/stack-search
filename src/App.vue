@@ -16,4 +16,8 @@ export default {
   }
 </script>
 
-<style></style>
+<style>
+html, body {
+  font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+}
+</style>
